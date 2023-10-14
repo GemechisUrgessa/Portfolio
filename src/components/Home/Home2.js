@@ -19,13 +19,17 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              I fell in love with programming and I have at least learnt
-              something, I think… 🤷‍♂️
-              <br />
-              <br />I am fluent in classics like
-              <i>
+                Through my passion for programming, I have gained extensive experience in a variety of programming languages, 
+                including <i>
                 <b className="purple"> C++, C, Dart, Javascript, HTML, CSS, Python, C#, Java, Rust, GO, React, Node.js and DJango. </b>
-              </i>
+              </i> I am particularly interested in 
+                developing new web technologies and products, as well as exploring the potential of <b className="purple">blockchain and AI.</b> 
+                 I have a strong background in <b className="purple"> MERN stack development</b>, and I am proficient in modern Javascript libraries 
+                 and frameworks such as <b className="purple"> React.js and Next.js.</b> I am always eager to learn and expand my skillset,
+                  and I am committed to delivering high-quality products that meet the needs of my clients and users.
+              {/* <br />
+              <br />I am fluent in classics like
+              
               <br />
               <br />
               My field of Interest's are building new &nbsp;
@@ -49,7 +53,7 @@ function Home2() {
               &nbsp; like
               <i>
                 <b className="purple"> React.js and Next.js</b>
-              </i>
+              </i> */}
             </p>
           </Col>
           <Col md={4} className="myAvtar">
@@ -58,56 +62,7 @@ function Home2() {
             </Tilt>
           </Col>
         </Row>
-        <Row>
-          <Col md={12} className="home-about-social">
-            <h1>FIND ME ON</h1>
-            <p>
-              Feel free to <span className="purple">connect </span>with me
-            </p>
-            <ul className="home-about-social-links">
-              <li className="social-icons">
-                <a
-                  href="https://github.com/gemechisurgessa"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiFillGithub />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/gemechisurgessa"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.linkedin.com/in/gemechis-urgessa-676609226/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <FaLinkedinIn />
-                </a>
-              </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/max_st_trill"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour home-social-icons"
-                >
-                  <AiFillInstagram />
-                </a>
-              </li>
-            </ul>
-          </Col>
-        </Row>
+        
       </Container>
     </Container>
   );

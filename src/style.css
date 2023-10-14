@@ -351,8 +351,8 @@ button:focus {
 
 .home-about-section {
   position: relative;
-  padding-bottom: 70px !important;
-  padding-top: 70px !important;
+  /* padding-bottom: 70px !important; */
+  /* padding-top: 70px !important; */
 }
 
 .home-about-description {
@@ -582,8 +582,8 @@ button:focus {
 
 .about-section {
   position: relative !important;
-  padding-top: 150px !important;
-  padding-bottom: 30px !important;
+  /* padding-top: 150px !important; */
+  /* padding-bottom: 30px !important; */
   background-image: var(--section-background-color) !important;
   color: white !important;
 }
