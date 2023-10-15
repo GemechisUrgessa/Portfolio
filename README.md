@@ -1,6 +1,6 @@
 <h2 align="center">
   Portfolio Website - v2.0<br/>
-  <a href="https://GemechisUrgessa.vercel.app/" target="_blank">GemechisUrgessa</a>
+  <a href="https://portfolio-gemechis-urgessas-projects.vercel.app/" target="_blank">GemechisUrgessa</a>
 </h2>
 <div align="center">
   <img alt="Demo" src="./Images/logo.png" />
