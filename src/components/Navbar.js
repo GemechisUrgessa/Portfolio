@@ -140,7 +140,7 @@ function NavBar() {
               >
                 <IoIosContacts
                   style={{ marginBottom: "2px", color: "white" }}
-                />
+                />{" "}
                 Contact
               </Nav.Link>
             </Nav.Item>
