@@ -808,3 +808,45 @@ button:focus {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.quote-card-view {
+  background: #f9f9f9; /* Light background */
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  /* transition: transform 0.3s; Smooth transform on hover */
+}
+
+.quote-card-view:hover {
+  transform: translateY(-10px); /* Slight lift on hover */
+}
+
+.purple {
+  color: #6e44ff; /* Adjust to your theme color */
+}
+
+.about-activity {
+  margin-left: 20px;
+  position: relative;
+  font-style: italic;
+}
+
+.about-activity:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  /* Style for the bullet point */
+}
+
+.motto {
+  color: rgb(155, 126, 172); /* Motto text color */
+  font-style: italic;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.animate__fadeIn {
+  animation-duration: 1s; /* Adjust duration as needed */
+}
