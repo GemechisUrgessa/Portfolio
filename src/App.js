@@ -18,6 +18,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
 import {AiOutlineArrowUp} from "react-icons/ai";
+import Contact from "./components/contact";
 function App() {
   const [load, upadateLoad] = useState(true);
   function scrollToTop() {
@@ -50,7 +51,9 @@ function App() {
         <About />
         <Projects />
         <Resume />
+        <Contact />
         <Footer />
+
       </div>
     </Router>
     // <>
