@@ -14,7 +14,8 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
+import { IoIosContacts } from "react-icons/io";
+import { GrContact } from "react-icons/gr";
 
 import { CgFileDocument } from "react-icons/cg";
 
@@ -63,8 +64,11 @@ function NavBar() {
                 to="/"
                 exact
                 // activeClassName="active"
-                onClick={() => {updateExpanded(false);
-                document.getElementById("home").scrollIntoView({ behavior: "smooth" });
+                onClick={() => {
+                  updateExpanded(false);
+                  document
+                    .getElementById("home")
+                    .scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
@@ -78,7 +82,9 @@ function NavBar() {
                 // activeClassName="active"
                 onClick={() => {
                   updateExpanded(false);
-                  document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+                  document
+                    .getElementById("about")
+                    .scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
@@ -90,8 +96,11 @@ function NavBar() {
                 as={NavLink}
                 to="/project"
                 // activeClassName="active"
-                onClick={() =>{ updateExpanded(false);
-                  document.getElementById("projects").scrollIntoView({ behavior: "smooth"});
+                onClick={() => {
+                  updateExpanded(false);
+                  document
+                    .getElementById("projects")
+                    .scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 <AiOutlineFundProjectionScreen
@@ -106,11 +115,33 @@ function NavBar() {
                 as={NavLink}
                 to="/resume"
                 // activeClassName="active"
-                onClick={() =>{ updateExpanded(false);
-                  document.getElementById("resume").scrollIntoView({ behavior: "smooth"});
+                onClick={() => {
+                  updateExpanded(false);
+                  document
+                    .getElementById("resume")
+                    .scrollIntoView({ behavior: "smooth" });
                 }}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={NavLink}
+                to="/contact"
+                // activeClassName="active"
+                onClick={() => {
+                  updateExpanded(false);
+                  document
+                    .getElementById("contact")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <IoIosContacts
+                  style={{ marginBottom: "2px", color: "white" }}
+                />
+                Contact
               </Nav.Link>
             </Nav.Item>
 
@@ -132,4 +163,3 @@ function NavBar() {
 }
 
 export default NavBar;
-

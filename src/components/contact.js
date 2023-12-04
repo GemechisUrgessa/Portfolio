@@ -25,7 +25,7 @@ const Contact = () => {
   };
 
   return (
-    <Container fluid className="contact">
+    <Container fluid className="contact" id="contact">
       <h1
         className="project-heading"
         style={{ paddingBottom: "20px", textAlign: "center" }}
