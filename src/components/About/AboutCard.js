@@ -1,46 +1,83 @@
 import React from "react";
-import Card from "react-bootstrap/Card";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import { ImPointRight } from "react-icons/im";
-// import "animate.css"; // Import animate.css for animations
-// import "./AboutCard.css"; // Import a custom CSS file for additional styling
+import Tilt from "react-parallax-tilt";
+import {
+  FaCode,
+  FaMobileAlt,
+  FaServer,
+  FaDatabase,
+  FaTools,
+  FaBlockchain,
+  FaRobot,
+  Fa500Px,
+} from "react-icons/fa";
 
-function AboutCard() {
+function ServicesPage() {
+  const services = [
+    {
+      title: "Web Development",
+      description:
+        "Building responsive and modern web applications using React, Next.js, and more.",
+      icon: <FaCode />,
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "Creating cross-platform mobile apps with Flutter and React Native.",
+      icon: <FaMobileAlt />,
+    },
+    {
+      title: "API Design & Integration",
+      description:
+        "Designing robust APIs and integrating third-party services seamlessly.",
+      icon: <FaServer />,
+    },
+    {
+      title: "Database Management",
+      description:
+        "Managing databases like MongoDB, PostgreSQL with a focus on scalability.",
+      icon: <FaDatabase />,
+    },
+    {
+      title: "DevOps & CI/CD",
+      description:
+        "Setting up CI/CD pipelines, automating deployments using Docker, Jenkins, and Kubernetes.",
+      icon: <FaTools />,
+    },
+    {
+      title: "Blockchain Development",
+      description:
+        "Developing decentralized apps and smart contracts on Ethereum and other platforms.",
+      icon: <Fa500Px />,
+    },
+    {
+      title: "AI & Machine Learning",
+      description:
+        "Integrating machine learning models into applications for intelligent automation.",
+      icon: <FaRobot />,
+    },
+  ];
+
   return (
-    <Card className="quote-card-view animate__animated animate__fadeIn">
-      <Card.Body>
-        <blockquote className="blockquote mb-0">
-          <p style={{ textAlign: "justify" }}>
-            Hi Everyone, I am <span className="purple">Gemechis Urgessa</span>
-            from <span className="purple">Ethiopia.</span>
-            <br /> I am a final year student pursuing B.sc in Software
-            Engineering from Addis Ababa Institute of Technology.
-            <br />
-            Additionally, I am currently employed as a software Engineer and
-            Researcher at UM.
-            <br />
-            <br />
-            Apart from coding, some other activities that I love to do!
-          </p>
-          <ul>
-            <li className="about-activity">
-              <ImPointRight /> Playing Games
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Writing Tech Blogs
-            </li>
-            <li className="about-activity">
-              <ImPointRight /> Traveling and Exploring new places
-            </li>
-          </ul>
-
-          <p className="motto">
-            "Strive to create things that can make a difference!"
-          </p>
-          <footer className="blockquote-footer">Gemechis Urgessa</footer>
-        </blockquote>
-      </Card.Body>
-    </Card>
+    <Container fluid className="services-section">
+      <div className="service-card-section">
+        {services.map((service, index) => (
+          <div key={index} className="service-card-wrapper">
+            <Tilt>
+              <Card className="service-card">
+                <Card.Body>
+                  <div className="service-icon">{service.icon}</div>
+                  <Card.Title className="purple">{service.title}</Card.Title>
+                  <Card.Text>{service.description}</Card.Text>
+                </Card.Body>
+              </Card>
+            </Tilt>
+          </div>
+        ))}
+      </div>
+    </Container>
   );
 }
 
-export default AboutCard;
+export default ServicesPage;

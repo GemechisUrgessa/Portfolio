@@ -7,13 +7,18 @@ import Type from "./Type";
 
 function Home() {
   return (
-    <section>
+    <div
+      style={{
+        width: "100% !important",
+        textAlign: "left",
+      }}
+    >
       <Container fluid className="home-section" id="home">
         <Particle />
         <Container className="home-content">
           <Row>
-            <Col md={7} className="home-header">
-              <h1 style={{ paddingBottom: 15 }} className="heading">
+            <Col md={7} sm={12} className="home-header">
+              <h1 className="heading">
                 Hi There!{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
@@ -25,32 +30,24 @@ function Home() {
                 <strong className="main-name"> Gemechis Urgessa </strong>
               </h1>
 
-              <div
-                style={{
-                  // paddingRight: 50,
-                  textAlign: "left",
-                  marginBottom: "3rem",
-                  marginLeft: "1rem",
-                }}
-              >
+              <div className="type-container">
                 <h1 className="heading-name">I'M</h1>
                 <Type />
               </div>
             </Col>
 
-            <Col md={5} style={{ paddingBottom: 20 }}>
+            <Col md={5} sm={12} className="image-col">
               <img
                 src={homeLogo}
                 alt="home pic"
-                className="img-fluid"
-                style={{ maxHeight: "450px" }}
+                className="img-fluid custom-img"
               />
             </Col>
           </Row>
         </Container>
       </Container>
       <Home2 />
-    </section>
+    </div>
   );
 }
 

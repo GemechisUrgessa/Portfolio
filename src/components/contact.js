@@ -33,10 +33,21 @@ const Contact = () => {
         <strong className="purple">Contact</strong> Me
       </h1>
       <Form name="contact">
-        <Row className="mb-3">
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexWrap: "wrap",
+            gap: "6px",
+          }}
+        >
           <Form.Group as={Col} controlId="formGridName flex">
             <Form.Label className="label">Name</Form.Label>
             <Form.Control
+              style={{
+                maxWidth: "400px",
+                width: "500px",
+              }}
               type="text"
               name="name"
               required
@@ -48,6 +59,9 @@ const Contact = () => {
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
             <Form.Control
+              style={{
+                maxWidth: "400px",
+              }}
               type="email"
               name="email"
               required
@@ -55,11 +69,14 @@ const Contact = () => {
               value={email}
             />
           </Form.Group>
-        </Row>
+        </div>
 
         <Form.Group className="mb-3" controlId="formGridMessage">
           <Form.Label>Message</Form.Label>
           <Form.Control
+            style={{
+              maxWidth: "400px",
+            }}
             as="textarea"
             name="message"
             required

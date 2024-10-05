@@ -20,19 +20,36 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Passionate in programming, I excel in{" "}
+              I am passionate about programming and love to explore new
+              technologies. I specialize in{" "}
               <span className="purple">
-                C++, Dart, Javascript, GO, Rust, Java, C , Python
+                C++, Dart, JavaScript, TypeScript, GO, Rust, Java, C, Python
               </span>
-              , and more. My interest lies in{" "}
-              <span className="purple">web technologies</span>,{" "}
-              <span className="purple">blockchain</span>, and{" "}
-              <span className="purple">AI</span>. Proficient in{" "}
-              <span className="purple">MERN stack</span> and frameworks like{" "}
-              <span className="purple">React.js</span>. Committed to delivering
-              quality products, I am on a continual journey of learning and
-              growth.
+              , and I have experience in{" "}
+              <span className="purple">web development, blockchain, AI,</span>{" "}
+              and frameworks like <span className="purple">React.js</span>,{" "}
+              <span className="purple">Node.js</span>.
+              <span className="purple">
+                {" "}
+                Django, Flask, FastAPI, Express.js, Next.js, Nest.js, Spring
+              </span>{" "}
+              and <span className="purple"> Spring Boot</span>.
+              <br />
+              <br />I am highly skilled in building applications with{" "}
+              <span className="purple">MERN Stack</span> and using databases
+              like <span className="purple">MongoDB</span>.
+              <br />
+              <br />
+              Continuously striving to deliver high-quality products, I’m on a
+              mission to master cutting-edge technologies like{" "}
+              <span className="purple">Docker</span> and{" "}
+              <span className="purple">Blockchain</span> to build scalable and
+              efficient solutions.
             </p>
+            <p className="motto">
+              "Strive to create things that can make a difference!"
+            </p>
+            <footer className="blockquote-footer">Gemechis Urgessa</footer>
           </Col>
           <Col md={4} className="my-avatar">
             <Tilt>

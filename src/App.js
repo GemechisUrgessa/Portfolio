@@ -6,27 +6,27 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes } from "react-router-dom";
 // import ScrollToTop from "./components/ScrollToTop";
 import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Button } from "react-bootstrap";
-import {AiOutlineArrowUp} from "react-icons/ai";
+import { AiOutlineArrowUp } from "react-icons/ai";
 import Contact from "./components/contact";
+
 function App() {
   const [load, upadateLoad] = useState(true);
+
+  // Scroll-to-top function
   function scrollToTop() {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth"
-            });
-          }
+    console.log("Scroll to top clicked");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }
+
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
@@ -39,25 +39,28 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
-        <div style={{position: "fixed", bottom: 10, right: 10, zIndex: "9999"}} >
-          <Button className="scroll-to-top" style={{color: "white", fontSize: "1.4rem"}} onClick={scrollToTop}>
-              <AiOutlineArrowUp />
+        <div
+          style={{ position: "fixed", bottom: 10, right: 10, zIndex: "9999" }}
+        >
+          <Button
+            className="scroll-to-top"
+            style={{ color: "white", fontSize: "1.4rem" }}
+            onClick={scrollToTop}
+          >
+            <AiOutlineArrowUp />
           </Button>
         </div>
         <NavBar />
-        <Routes>
-        </Routes>
         <Home />
         <About />
         <Projects />
         <Resume />
         <Contact />
         <Footer />
-
       </div>
     </Router>
     // <>
-    
+
     // </>
   );
 }
