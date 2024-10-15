@@ -1,10 +1,16 @@
 import React, { useState } from "react";
 import { Form, Button, Row, Col, Container } from "react-bootstrap";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [response, setResponse] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const { REACT_APP_SERVICE_ID, REACT_APP_TEMPLATE_ID, REACT_APP_USER_ID } =
+    process.env;
 
   const handleNameChange = (e) => {
     setName(e.target.value);
@@ -18,10 +24,55 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    //todo send the message to my email
-    setName("");
-    setEmail("");
-    setMessage("");
+    setResponse("");
+    if (!handleValidation()) return;
+    setSubmitted(true);
+    emailjs
+      .send(
+        REACT_APP_SERVICE_ID,
+        REACT_APP_TEMPLATE_ID,
+        {
+          from_name: name,
+          replay_to: email,
+          message: message,
+        },
+        REACT_APP_USER_ID
+      )
+      .then(
+        () => {
+          setResponse("Successfully submitted!");
+          setSubmitted(false);
+          setName("");
+          setEmail("");
+          setMessage("");
+        },
+        (error) => {
+          setResponse("Error while submitting!");
+          setSubmitted(false);
+          console.log(error);
+        }
+      );
+  };
+
+  const handleValidation = () => {
+    let formIsValid = true;
+
+    if (!name) {
+      formIsValid = false;
+      setResponse("Name is required!");
+    }
+
+    if (!email || !email.match(/^([\w.%+-]+)@([\w-]+\.)+([\w]{2,})$/i)) {
+      formIsValid = false;
+      setResponse("Please enter a valid email address!");
+    }
+
+    if (!message) {
+      formIsValid = false;
+      setResponse("Message is required!");
+    }
+
+    return formIsValid;
   };
 
   return (
@@ -90,10 +141,15 @@ const Contact = () => {
           </Button>
         ) : (
           <Button variant="primary" type="submit" disabled>
-            Submit
+            {submitted ? "Submitting..." : "Submit"}
           </Button>
         )}
       </Form>
+      {response.includes("Successfully") ? (
+        <p style={{ color: "green" }}>{response}</p>
+      ) : (
+        <p style={{ color: "red" }}>{response}</p>
+      )}
     </Container>
   );
 };

@@ -57,10 +57,19 @@ function ServicesPage() {
         "Integrating machine learning models into applications for intelligent automation.",
       icon: <FaRobot />,
     },
+    {
+      title: "System Design",
+      description:
+        "Designing scalable and high-performance systems for web and mobile applications.",
+      icon: <ImPointRight />,
+    },
   ];
 
   return (
-    <Container fluid className="services-section">
+    <Container fluid className="services-section" id="Services">
+      <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
+        Services <strong className="purple">I</strong> Provide
+      </h1>
       <div className="service-card-section">
         {services.map((service, index) => (
           <div key={index} className="service-card-wrapper">

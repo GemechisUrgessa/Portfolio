@@ -34,14 +34,11 @@ function Home2() {
                 Django, Flask, FastAPI, Express.js, Next.js, Nest.js, Spring
               </span>{" "}
               and <span className="purple"> Spring Boot</span>.
-              <br />
               <br />I am highly skilled in building applications with{" "}
               <span className="purple">MERN Stack</span> and using databases
-              like <span className="purple">MongoDB</span>.
-              <br />
-              <br />
-              Continuously striving to deliver high-quality products, I’m on a
-              mission to master cutting-edge technologies like{" "}
+              like <span className="purple">MongoDB</span>. Continuously
+              striving to deliver high-quality products, I’m on a mission to
+              master cutting-edge technologies like{" "}
               <span className="purple">Docker</span> and{" "}
               <span className="purple">Blockchain</span> to build scalable and
               efficient solutions.

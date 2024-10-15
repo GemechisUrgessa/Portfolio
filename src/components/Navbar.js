@@ -14,7 +14,7 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-import { IoIosContacts } from "react-icons/io";
+import { IoIosBriefcase, IoIosContacts } from "react-icons/io";
 import { GrContact } from "react-icons/gr";
 
 import { CgFileDocument } from "react-icons/cg";
@@ -147,6 +147,25 @@ function NavBar() {
                   style={{ marginBottom: "2px", color: "white" }}
                 />{" "}
                 Contact
+              </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+              <Nav.Link
+                as={NavLink}
+                to="/Services"
+                // activeClassName="active"
+                onClick={() => {
+                  updateExpanded(false);
+                  document
+                    .getElementById("Services")
+                    .scrollIntoView({ behavior: "smooth" });
+                }}
+              >
+                <IoIosBriefcase
+                  style={{ marginBottom: "2px", color: "white" }}
+                />{" "}
+                Services
               </Nav.Link>
             </Nav.Item>
 

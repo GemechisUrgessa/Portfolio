@@ -21,9 +21,6 @@ function About() {
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Services <strong className="purple">I</strong> Provide
-            </h1>
             <Aboutcard />
           </div>
           {/* <Col
@@ -40,10 +37,10 @@ function About() {
 
         <Techstack />
 
-        <h1 className="project-heading">
+        {/* <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
-        </h1>
-        <Toolstack />
+        </h1> */}
+        {/* <Toolstack /> */}
 
         <Github />
       </Container>
